@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kriptografi Lengkap</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+</head>
+<body>
+
+<h1>
+  Kriptografi Lengkap<br>
+  <span>Muhammad Rafi Aldan Pratama – 2255201187</span>
+</h1>
+
+<div class="container">
+
+  <!-- LEFT -->
+  <div class="left">
+
+    <select id="method" onchange="showInputs()">
+      <option>Caesar</option>
+      <option>Vigenere</option>
+      <option>Hill</option>
+      <option>RSA</option>
+      <option>RSA Dokumen</option>
+      <option>AES</option>
+      <option>AES Dokumen</option>
+    </select>
+
+    <textarea id="inputText" placeholder="Masukkan teks..."></textarea>
+
+    <div class="key-box" id="keyBox"></div>
+
+    <div class="info-box" id="infoBox">
+      <b>📘 Penjelasan Kunci</b>
+      <p>Pilih metode kriptografi.</p>
+    </div>
+
+    <input type="file" id="fileInput" accept=".txt" hidden>
+
+    <button onclick="process('encrypt')">🔐 Enkripsi</button>
+    <button onclick="process('decrypt')">🔓 Dekripsi</button>
+    <button onclick="downloadResult()">💾 Download Hasil</button>
+
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+    <h3>Hasil Output</h3>
+    <textarea id="outputText" readonly></textarea>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
